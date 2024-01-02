@@ -1,0 +1,31 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  border: none;
+  width: 450px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, rgb(40, 105, 152), rgb(52, 39, 77) 100%);
+  box-shadow: 6px 7px 17px -3px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 6px 7px 17px -3px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 6px 7px 17px -3px rgba(0, 0, 0, 0.8);
+}
+.card label h1,
+h6 {
+  color: #fff;
+}
+label {
+  color: #fff;
+}
+button {
+  margin-left: 73%;
+  width: 100px;
+}

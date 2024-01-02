@@ -1,0 +1,10 @@
+body {
+  background-color: linear-gradient(
+    to right bottom,
+    #155fcd,
+    #0093f3,
+    #00bbd4,
+    #00da84,
+    #a8eb12
+  );
+}

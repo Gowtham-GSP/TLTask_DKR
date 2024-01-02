@@ -1,0 +1,48 @@
+<div
+  class="row"
+  style="max-width: 100%; height: 60px; background-color: rgb(187, 234, 219)"
+>
+  <div style="text-align: end; margin-top: 10px">
+    <button class="btn btn-dark" style="width: 100px" routerLink="/home">
+      Back
+    </button>
+  </div>
+</div>
+<div class="row" style="max-width: 100%; height: 60px">
+  <div class="col-md-6">
+    <!-- <h5 style="margin-top: 10px">Date : {{ date1 }}</h5> -->
+    <h5 style="margin-top: 13px; margin-left: 20px">Date : {{ localDate }}</h5>
+  </div>
+  <div class="col-md-6" style="text-align: end; margin-top: 12px">
+    <input
+      type="date"
+      style="margin-top: 10px"
+      name="from"
+      [(ngModel)]="Date1"
+    />
+    to
+    <input type="date" name="end" [(ngModel)]="Date2" />
+    <button
+      class="btn btn-success"
+      style="margin-left: 10px; width: 100px"
+      (click)="getDateRange()"
+      (click)="CalculateDays()"
+    >
+      filter
+    </button>
+    <!-- <button class="btn btn-warning" style="margin-left: 10px">Get days</button> -->
+    <!-- <button class="btn btn-primary" (click)="getDate()">click</button> -->
+  </div>
+</div>
+<!-- <div style="margin-left: 20px">Number of days: {{ Days }}</div> -->
+<!-- <div>total dates: {{ Days }}</div> -->
+<div style="margin-left: 20px">Total number of user: {{ showDate }}</div>
+<div style="margin-left: 20px">
+  Number of user by date range: {{ displayDate }}
+</div>
+
+<!-- chat  -->
+
+<div class="charts" style="margin-top: 20px">
+  <div class="line" [chart]="lineChart"></div>
+</div>

@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-white"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- for searching by name -->
+      <div class="row" style="padding: 8px 20px">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchTxt"
+          style="width: 250px"
+          placeholder="Enter name here"
+        />
+      </div>
+
+      <button
+        class="btn btn-dark"
+        type="submit"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+        routerLink="/chart"
+      >
+        <i class="bi bi-bar-chart"></i> User chart
+      </button>
+      <button
+        routerLink="/login"
+        class="btn btn-danger mx-2"
+        style="width: 150px"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
+<!-- ------------------------------ table ----------------------------------- -->
+
+<table class="table table-hover" style="margin-left: 10px">
+  <thead>
+    <tr>
+      <!-- <th scope="col">Id</th> -->
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+      <th scope="col">Email</th>
+      <th scope="col">phone</th>
+      <th scope="col">UserName</th>
+      <th scope="col">password</th>
+      <th scope="col" class="text-center" style="max-height: 100px">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of userData | filter : searchTxt">
+      <!-- <td>{{ row.id }}</td> -->
+      <td>{{ row.fullName }}</td>
+      <td>{{ row.lastName }}</td>
+      <td>{{ row.email }}</td>
+      <td>{{ row.phone }}</td>
+      <td>{{ row.userName }}</td>
+      <td>{{ row.password }}</td>
+
+      <td class="text-center">
+        <button
+          class="btn btn-warning mx-2 w-25"
+          type="submit"
+          routerLink="/update/{{ row.id }}"
+        >
+          Edit
+        </button>
+        <button class="btn btn-danger" (click)="DeleteUser(row)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

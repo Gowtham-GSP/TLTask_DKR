@@ -1,0 +1,151 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "LoginUsers": [
+    {
+      "fullName": "john",
+      "lastName": "wick",
+      "email": "john@mail.com",
+      "phone": "9715438497",
+      "userName": "John",
+      "password": "John@123",
+      "date": "10/5/2023",
+      "id": 25
+    },
+    {
+      "fullName": "raj",
+      "lastName": "kumar",
+      "email": "raj@mail.com",
+      "phone": "57686586",
+      "userName": "raj",
+      "password": "Raj@1234",
+      "date": "10/5/2023",
+      "id": 26
+    },
+    {
+      "fullName": "mani",
+      "lastName": "mani",
+      "email": "mani@mail.com",
+      "phone": "765848654",
+      "userName": "mani",
+      "password": "Mani@123",
+      "date": "10/6/2023",
+      "id": 27
+    },
+    {
+      "fullName": "mano",
+      "lastName": "mias",
+      "email": "mano@mail.com",
+      "phone": "96758769765",
+      "userName": "mano",
+      "password": "Mano@123",
+      "date": "10/6/2023",
+      "id": 28
+    },
+    {
+      "fullName": "arun",
+      "lastName": "kumar",
+      "email": "arun@mail.com",
+      "phone": "784864897",
+      "userName": "arun",
+      "password": "Arun@123",
+      "date": "10/6/2023",
+      "id": 29
+    },
+    {
+      "fullName": "gsp",
+      "lastName": "swag",
+      "email": "gsp@mail.com",
+      "phone": "976487648",
+      "userName": "gsp",
+      "password": "Gsp@123",
+      "date": "10/6/2023",
+      "id": 30
+    },
+    {
+      "fullName": "abi",
+      "lastName": "sheck",
+      "email": "abi@mail.com",
+      "phone": "97877457675",
+      "userName": "abi",
+      "password": "Abi@1234",
+      "date": "10/8/2023",
+      "id": 31
+    },
+    {
+      "fullName": "kamal",
+      "lastName": "nath",
+      "email": "kamal@mail.com",
+      "phone": "98798609",
+      "userName": "kamal",
+      "password": "Kamal@123",
+      "date": "10/8/2023",
+      "id": 32
+    },
+    {
+      "fullName": "karan",
+      "lastName": "kumar",
+      "email": "karan@mail.com",
+      "phone": "0869875975",
+      "userName": "karan",
+      "password": "Karan@123",
+      "date": "10/9/2023",
+      "id": 33
+    },
+    {
+      "fullName": "surya",
+      "lastName": "warma",
+      "email": "surya@mail.com",
+      "phone": "768765867",
+      "userName": "surya",
+      "password": "Surya@123",
+      "date": "10/9/2023",
+      "id": 34
+    },
+    {
+      "fullName": "jonathen",
+      "lastName": "wick",
+      "email": "wick@mail.com",
+      "phone": "9897596",
+      "userName": "john",
+      "password": "John@8758",
+      "date": "10/9/2023",
+      "id": 36
+    },
+    {
+      "fullName": "sarat",
+      "lastName": "kumar",
+      "email": "sarath@mail.com",
+      "phone": "798578986",
+      "userName": "sarath",
+      "password": "Sarath@123",
+      "date": "10/10/2023",
+      "id": 37
+    },
+    {
+      "fullName": "kamal",
+      "lastName": "lesh",
+      "email": "kamal@mail.com",
+      "phone": "78965967987",
+      "userName": "Kamal",
+      "password": "Kamal@123",
+      "date": "10/10/2023",
+      "id": 38
+    },
+    {
+      "fullName": "kamalesh",
+      "lastName": "s",
+      "email": "kamal@mail.com",
+      "phone": "96987575",
+      "userName": "kamalesh",
+      "password": "Kamal@1233",
+      "date": "10/10/2023",
+      "id": 39
+    }
+  ]
+}

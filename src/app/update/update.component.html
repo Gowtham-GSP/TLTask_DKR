@@ -1,0 +1,92 @@
+<div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="exampleInputEmail1" class="form-label">FullName</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter fullName"
+            [(ngModel)]="user.fullName"
+            name="fullName"
+          />
+          <label for="exampleInputEmail1" class="form-label">LastName</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter LastName"
+            [(ngModel)]="user.lastName"
+            name="lastName"
+          />
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Enter Email"
+            [(ngModel)]="user.email"
+            name="email"
+          />
+          <label for="exampleInputEmail1" class="form-label">phone</label>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">+91</span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Number"
+              [(ngModel)]="user.phone"
+              name="phone"
+            />
+          </div>
+          <label for="exampleInputEmail1" class="form-label">UserName</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter UserName "
+            [(ngModel)]="user.userName"
+            name="userName"
+          />
+          <label for="exampleInputEmail1" class="form-label">password</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter password"
+            [(ngModel)]="user.password"
+            name="password"
+          />
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button
+          id="cancel"
+          type="button"
+          class="btn btn-secondary"
+          routerLink="/home"
+        >
+          Back
+        </button>
+
+        <button
+          id="cancel"
+          type="button"
+          class="btn btn-primary"
+          (click)="update()"
+        >
+          Update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <pre>{{ user | json }}</pre> -->

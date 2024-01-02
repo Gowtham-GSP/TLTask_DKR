@@ -1,0 +1,209 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1 class="text-white">Sign<span>Up</span></h1>
+          <h5 class="mb-3">Please register here</h5>
+        </div>
+        <form class="mt-2" [formGroup]="signupForm" (ngSubmit)="signup()">
+          <div class="mb-3">
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label mb-3"
+                >fullName</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                formControlName="fullName"
+                placeholder="Enter your FullName"
+              />
+              <!-- display error -->
+              <div
+                *ngIf="fullname.invalid && (fullname.touched || fullname.dirty)"
+              >
+                <span class="error" *ngIf="fullname.errors?.required"
+                  >*Full name is required</span
+                >
+                <span class="error" *ngIf="fullname.errors?.pattern"
+                  >*Enter Only Characters</span
+                >
+              </div>
+              <!-- <span
+                class="text-danger"
+                *ngIf="
+                  signupForm.controls['fullName'].dirty &&
+                  signupForm.hasError('required', 'fullName')
+                "
+              >
+                fullName is required</span
+              > -->
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword2" class="form-label mb-3"
+                >lastName</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                formControlName="lastName"
+                placeholder="Enter your lastName"
+              />
+              <!-- display error -->
+              <div
+                *ngIf="lastname.invalid && (lastname.touched || lastname.dirty)"
+              >
+                <span class="error" *ngIf="lastname.errors?.required"
+                  >*Last name is required</span
+                >
+                <span class="error" *ngIf="lastname.errors?.pattern"
+                  >*Enter Only Characters</span
+                >
+              </div>
+              <!-- <span
+                class="text-danger"
+                *ngIf="
+                  signupForm.controls['lastName'].dirty &&
+                  signupForm.hasError('required', 'lastName')
+                "
+              >
+                lastName is required</span
+              > -->
+            </div>
+            <label for="exampleInputEmail1" class="form-label mb-3"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              aria-describedby="emailHelp"
+              formControlName="email"
+              placeholder="Enter your Email"
+            />
+            <!-- display error -->
+            <div *ngIf="Email.invalid && (Email.touched || Email.dirty)">
+              <span class="error" *ngIf="Email.errors?.required"
+                >*Email is required</span
+              >
+              <span class="error" *ngIf="Email.errors?.pattern"
+                >Enter valid mail Address</span
+              >
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="
+                signupForm.controls['email'].dirty &&
+                signupForm.hasError('required', 'email')
+              "
+            >
+              email is required</span
+            > -->
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label mb-3"
+              >Phone</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              formControlName="phone"
+              placeholder="Enter your Phone number"
+            />
+            <!-- display error -->
+            <div *ngIf="Phone.invalid && (Phone.touched || Phone.dirty)">
+              <span class="error" *ngIf="Phone.errors?.required"
+                >Phone number is required</span
+              >
+              <span class="error" *ngIf="Phone.errors?.pattern"
+                >Enter only number</span
+              >
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="
+                signupForm.controls['phone'].dirty &&
+                signupForm.hasError('required', 'phone')
+              "
+            >
+              number is required</span
+            > -->
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label mb-3"
+              >User name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              formControlName="userName"
+              placeholder="Enter your UserName"
+            />
+            <!-- display error -->
+            <div
+              *ngIf="Username.invalid && (Username.touched || Username.dirty)"
+            >
+              <span class="error" *ngIf="Username.errors?.required"
+                >UserName is required</span
+              >
+              <span class="error" *ngIf="Username.errors?.pattern"
+                >Enter only Character</span
+              >
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="
+                signupForm.controls['userName'].dirty &&
+                signupForm.hasError('required', 'userName')
+              "
+            >
+              UserName is required</span
+            > -->
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label mb-3"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+              placeholder="Enter your new password"
+            />
+            <!-- display error -->
+            <div
+              *ngIf="Password.invalid && (Password.touched || Password.dirty)"
+            >
+              <span class="error" *ngIf="Password.errors?.required"
+                >password is required</span
+              >
+              <span class="error" *ngIf="Password.errors?.pattern"
+                >Enter valid pattern</span
+              >
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="
+                signupForm.controls['password'].dirty &&
+                signupForm.hasError('required', 'password')
+              "
+            >
+              password is required</span
+            > -->
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="signupForm.valid"
+          >
+            signup
+          </button>
+        </form>
+        <a routerLink="/login" class="text-white"
+          >Existing User? Click to login</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
